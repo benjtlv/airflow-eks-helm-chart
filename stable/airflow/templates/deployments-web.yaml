@@ -132,7 +132,7 @@ spec:
           args:
             - "bash"
             - "-c"
-          {{- if and ( .Values.dags.initContainer.enabled ) ( .Values.dags.initContainer.installRequirements ) }}
+          {{- if .Values.dags.initContainer.installRequirements }}
             - >
               echo 'waiting {{ .Values.web.initialStartupDelay }}s...' &&
               sleep {{ .Values.web.initialStartupDelay }} &&
