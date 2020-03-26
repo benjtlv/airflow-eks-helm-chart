@@ -579,7 +579,7 @@ postgresql:
   service:
     port: 5432
   ## PostgreSQL User to create.
-  postgresUser: postgres
+  postgresUser: airflow
   ##
   ## PostgreSQL Password for the new user.
   ## If not set, a random 10 characters password will be used.
