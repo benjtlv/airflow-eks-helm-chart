@@ -282,12 +282,12 @@ workers:
   ##
   ## Custom resource configuration
   resources: {}
-    # limits:
-    #   cpu: "1"
-    #   memory: "2G"
-    # requests:
-    #   cpu: "0.5"
-    #   memory: "512Mi"
+     limits:
+       cpu: "1"
+       memory: "2G"
+     requests:
+       cpu: "0.5"
+       memory: "512Mi"
   ##
   ## Labels for the Worker statefulSet
   labels: {}
