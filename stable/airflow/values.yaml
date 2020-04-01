@@ -161,12 +161,16 @@ airflow:
   #     mountPath: /dags
   extraVolumeMounts: []
   ## Additional volumeMounts to the main containers in the Scheduler, Worker and Web pods.
-  # - name: synchronised-dags
-  #   mountPath: /usr/local/airflow/dags
+    - name: synchronised-dags
+      mountPath: /usr/local/airflow/dags
+    - name: synchronised-logs
+      mountPath: /usr/local/airflow/dags
   extraVolumes: []
   ## Additional volumes for the Scheduler, Worker and Web pods.
-  # - name: synchronised-dags
-  #   emptyDir: {}
+    - name: synchronised-dags
+      emptyDir: {}
+    - name: synchronised-logs
+      emptyDir: {}
 
   ##
   ## Run initdb when the scheduler starts.
