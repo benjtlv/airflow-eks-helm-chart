@@ -3,7 +3,7 @@
 ## that only serve logs, that will be used by the web server.
 
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: {{ template "airflow.fullname" . }}-worker
   labels:
